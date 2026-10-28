@@ -44,8 +44,8 @@ Full table: `tests/test_samples.md`
 ![Test results](screenshots/test_results.png)
 
 ## Improvements
-1. **Loop with quit** - [what changed, why, how you tested it]
-2. **Malformed input handling** - [what changed, why, how you tested it]
+1. **Loop with quit** - The original program checked one URL and then closed. I added a while loop so users can check many URLs in one run and type q to quit. I tested it by entering several URLs in a row, then typing q.
+2. **Malformed input handling** - Typing http://[bad crashed the program with a ValueError. I wrapped the urlparse line in try/except, so it now prints "This text is not a valid URL format." I tested it by typing http://[bad and re-running all five sample tests.
 
 ## Limitations
 This is an educational tool. It only reads URL text. It does not visit
